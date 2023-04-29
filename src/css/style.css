@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sora", sans-serif;
+}
+
+:root {
+    --branco: #fef6f4;
+    --vermelho: #ce3031;
+    --verde: #5c913b;
+    --amarelo: #ffa200;
+    --pink: #ffd4c9;
+    --cinza: #616161;
+    --preto: #2e2e2e;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 1580px;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .40s ease;
+}
+
+.banner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner h1 {
+    background-color: #2e2e2e99;
+    color: #fef6f4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    transition: all .40s ease;
+}
+
+.amarelo {
+    display: inline-block;
+    color: var(--amarelo);
+}
+
+.vermelho {
+    display: inline-block;
+    color: var(--vermelho);
+}
+
+.verde {
+    display: inline-block;
+    color: var(--verde);
+}
+
+.mais-vendidas {
+    position: relative;
+    padding: 30px 8%;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.louro {
+    position: absolute;
+    top: -4vmax;
+    left: 0;
+    z-index: 500;
+    max-width: 10vw;
+}
+
+.pimenta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 10vw;
+}
+
+.folha {
+    position: absolute;
+    right: 3%;
+    z-index: -1;
+    max-width: 13vw;
+}
+
+.cogumelo {
+    position: absolute;
+    right: 13%;
+    top: 5%;
+    max-width: 10vw;
+}
+
+.sardinha {
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    max-width: 10vw;
+}
+
+.mais-vendidas h1 {
+    font-weight: 600;
+    font-size: 2.25rem;
+    color: var(--preto);
+}
+
+.quatro-melhores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    transition: all .40s ease;
+}
+
+.pizza {
+    position: relative;
+    padding: 70px 0 30px;
+    background-color: var(--branco);
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    gap: 10px;
+}
+
+.pizza img {
+    position: absolute;
+    top: -50px;
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 50%;
+}
+
+.favorito {
+    background-color: var(--pink);
+    position: absolute;
+    top: -5%;
+    right: 10%;
+    color: var(--vermelho);
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--vermelho);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .40s ease;
+}
+
+.favorito:hover {
+    transform: scale(1.05);
+}
+
+.pizza h2 {
+    color: var(--preto);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.descricao {
+    max-width: 70%;
+    color: var(--cinza);
+    font-weight: 400;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.preco {
+    color: var(--preto);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.pizza .comprar {
+    background-color: var(--amarelo);
+    color: var(--preto);
+    position: absolute;
+    bottom: -15px;
+    width: 150px;
+    height: 30px;
+    font-size: 0.75rem;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.sobre {
+    padding: 30px 8%;
+    background-color: #fcfcfc;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-sobre {
+    position: relative;
+    width: 450px;
+    max-width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-sobre .imagem-princ {
+    width: 100%;
+    height: 500px;
+    max-width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.enfeite-pizza {
+    position: absolute;
+    top: 5%;
+    left: -12.5%;
+    max-width: 25%;
+    max-height: 25%;
+    object-fit: contain;
+}
+
+.descricao-sobre {
+    padding-left: 8%;
+    width: calc(100% - 450px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+}
+
+.descricao-sobre h1 {
+    color: var(--preto);
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.descricao-sobre p {
+    color: var(--preto);
+    max-width: 458px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    overflow-y: auto;
+}
+
+.descricao-sobre button {
+    background-color: var(--amarelo);
+    color: var(--preto);
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .40s ease;
+}
+
+.descricao-sobre button:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #fff;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.texto-footer {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media Screen and (max-width: 1100px) {
+    .banner h1 {
+        font-size: 5rem;
+    }
+
+    .mais-vendidas, .sobre {
+        padding: 30px 6%;
+    }
+
+    .sardinha {
+        display: none;
+    }
+
+    .quatro-melhores{
+        margin: 75px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 75px;
+    }
+}
+
+@media Screen and (max-width: 920px) {
+    .banner {
+        height: 400px;
+    }
+    
+    .banner h1 {
+        font-size: 4rem;
+    }
+
+    .mais-vendidas, .sobre {
+        padding: 30px 4%;
+    }
+}
+
+@media Screen and (max-width: 850px) {
+    .mais-vendidas h1 {
+        font-size: 2rem;
+    }
+    
+    .preco {
+        font-size: 1.75rem;
+    }
+    
+    .img-sobre {
+        display: none;
+    }
+
+    .descricao-sobre {
+        padding-left: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .descricao-sobre h1 {
+        font-size: 2rem;
+    }
+
+    .descricao-sobre p {
+        font-size: 0.925rem;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .texto-footer {
+        font-size: 0.925rem;
+    }
+}
+
+@media Screen and (max-width: 712px) {
+
+    .quatro-melhores {
+        gap: 75px 20px;
+    }
+}
+
+@media Screen and (max-width: 655px) {
+    .quatro-melhores {
+        width: 100%;
+    }
+}
+
+@media Screen and (max-width: 488px) {   
+    .banner {
+        height: 300px;
+    }
+
+    .banner h1 {
+        font-size: 3.2rem;
+    }
+    
+    .quatro-melhores{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr  1fr  1fr;
+    }
+
+    .sobre {
+        height: 400px;
+    }
+
+    .descricao-sobre {
+        gap: 18px;
+    }
+}
